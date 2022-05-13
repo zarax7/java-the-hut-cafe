@@ -1,0 +1,303 @@
+body {
+  font-family: "Poppins", "Quicksand", sans-serif;
+  background-image: url("../images/bg-menu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  background-color: rgb(133, 117, 98);
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-java {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-java:hover {
+  color: red;
+}
+
+.nav-home {
+  margin-left: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.nav-home:hover {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+
+a:hover {
+  border-radius: 4px;
+  color: rgb(169, 149, 123);
+}
+
+.back-link > a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Poppins", "Press Start 2P", cursive;
+  border-bottom: 5px solid #1f3933;
+  padding-bottom: 15px;
+}
+
+h3 {
+  font-family: "Poppins", "Quicksand", sans-serif;
+}
+
+p {
+  text-align: center;
+}
+
+.product-img > img {
+  height: 270px;
+  width: 270px;
+  margin-left: 150px;
+}
+
+.product {
+  background-color: #1f3933;
+  opacity: 0.8;
+  border-radius: 15px;
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 1480px;
+}
+
+.product-wrapper {
+  display: flex;
+}
+
+.product-description > input {
+  background-color: #1f3933;
+  opacity: 0.8;
+  color: white;
+  border: none;
+  font-size: 2.4rem;
+  margin-left: 190px;
+  margin-top: 110px;
+  font-weight: bold;
+  font-family: oDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.product-description > p {
+  color: white;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 110px;
+  font-weight: bold;
+  font-family: oDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.product-description-drinkprice > p {
+  color: white;
+  text-align: center;
+  margin-left: 130px;
+  margin-top: 50px;
+}
+
+.product-description-foodprice > p {
+  color: white;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 115px;
+  font-size: 25px;
+}
+
+.sizes {
+  margin-top: 20px;
+  padding: 5px 80px;
+  border-radius: 7px;
+  opacity: 90%;
+  min-width: 100px;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.size-options {
+  font-family: "Poppins", "Press Start 2P", cursive;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 40px 0;
+  border-bottom: 5px solid #1f3933;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customizations {
+  margin-top: 20px;
+  padding: 10px 120px;
+  border-radius: 7px;
+  font-weight: bold;
+  min-width: 154px;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.customization-header {
+  display: flex;
+  justify-content: left;
+}
+
+.customizations > h2 {
+  font-size: 18px;
+}
+
+.customization-button {
+  row-gap: 10px;
+}
+
+.customization-button > button {
+  width: 25px;
+  height: 20px;
+}
+
+#customization-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+#input-cream,
+#input-milk,
+#input-sugar {
+  width: 30px;
+  text-align: center;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labels > button {
+  height: 22px;
+  width: 22px;
+  margin-left: 10px;
+}
+
+.cup-sizes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.cup-buttons > input {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.cup-buttons > img:hover {
+  -webkit-filter: invert(70%);
+  filter: invert(70%);
+}
+
+.cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.cart-button > button {
+  font-size: 1rem;
+  font-family: "Poppins", "Quicksand", sans-serif;
+  background-color: rgb(133, 117, 98);
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 18px 2.4rem;
+  margin-bottom: 1rem;
+  margin-top: 25px;
+  position: relative;
+}
+
+.go-to-cart-button {
+  font-size: 1rem;
+  font-family: "Poppins", "Quicksand", sans-serif;
+  background-color: rgb(133, 117, 98);
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 18px 2.4rem;
+  margin-bottom: 1rem;
+  margin-top: 25px;
+  height: 20px;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-description > p {
+    margin: 0;
+    padding-top: 90px;
+    text-align: center;
+  }
+
+  .product-img > img {
+    margin: 0;
+  }
+  .section {
+    gap: 40px;
+  }
+
+  .cup-sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-button > button {
+    margin-left: 300px;
+  }
+}

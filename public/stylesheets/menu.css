@@ -1,0 +1,137 @@
+body {
+  font-family: "Poppins", "Quicksand", sans-serif;
+  background-image: url("../images/bg-menu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  background-color: rgb(133, 117, 98);
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-java {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-java:hover {
+  color: red;
+}
+
+.nav-home {
+  margin-left: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.nav-home:hover {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+
+a:hover {
+  border-radius: 4px;
+  color: rgb(169, 149, 123);
+}
+
+#drinks-header {
+  font-size: 40px;
+  color: rgb(34, 23, 23);
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#food-header {
+  font-size: 40px;
+  color: rgb(34, 23, 23);
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
+.product-images:hover {
+  color: white;
+}
+
+.product-header {
+  font-family: "Poppins", "Press Start 2P", cursive;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.drink-images-wrapper {
+  display: grid;
+  justify-self: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.food-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.food-images-wrapper {
+  display: grid;
+  justify-self: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-images {
+    width: 80%;
+  }
+}

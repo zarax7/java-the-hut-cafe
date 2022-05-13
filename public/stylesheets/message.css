@@ -1,0 +1,120 @@
+body {
+  font-family: "Poppins", "Quicksand", sans-serif;
+  background-image: url("../images/bg-cart.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  background-color: rgb(133, 117, 98);
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-java {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-java:hover {
+  color: red;
+}
+
+.nav-home {
+  margin-left: 50px;
+  margin-right: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.nav-home:hover {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+
+a:hover {
+  border-radius: 4px;
+  color: rgb(169, 149, 123);
+}
+
+#hut {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+#hut:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+#hut-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#order-placed {
+  margin-top: 5px;
+  border-bottom: 5px solid #1f3933;
+  font-size: 20px;
+}
+
+.wrapper {
+  display: grid;
+  justify-items: center;
+}
+
+.thanks-message {
+  text-align: center;
+  margin-top: 60px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 15px;
+  width: 40em;
+  padding: 20px;
+}
+
+.thanks-message > p {
+  color: black;
+}
+.product-name {
+  font-weight: bold;
+}

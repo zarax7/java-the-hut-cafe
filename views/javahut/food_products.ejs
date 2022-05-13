@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500&family=Poppins:wght@400;700"
+      rel="stylesheet"
+    />
+    <title>Café Java Hut- Food</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <img
+            class="nav-java"
+            src="/images/logo-java.png"
+            height="60px"
+            width="70px"
+          />
+          <a class="nav-java" href="/home">Café Java Hut/a>
+        </div>
+        <div class="navbar">
+          <a class="nav-home" href="/menu">Menu</a>
+          <a class="nav-home" href="/cart">Cart</a>
+          <a class="nav-home" href="/user">Sign in</a>
+        </div>
+      </nav>
+    </header>
+    <form action="/cart" method="POST" autocomplete="off">
+      <div class="product">
+        <div class="product-wrapper">
+          <div class="product-img">
+            <img src="<%=food.product_image%>" />
+            <input
+            type="text"
+            name="price"
+            id="price"
+            value="<%=food.price%>"
+            hidden
+          />
+          </div>
+          <div class="product-description">
+            <input type="text" name="name" value="<%= food.name %>" />
+          </div>
+          <div class="product-description-foodprice">
+            <p>$<%= food.price %></p>
+          </div>
+        </div>
+      </div>
+      <div class="cart-button">
+        <button>Add to Cart</button>
+        <a class="go-to-cart-button" href="/cart">Go To Cart</a>
+      </div>
+    </form>
+    <div class="back-link">
+      <a href="/menu">Back</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/menu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500&family=Poppins:wght@400;700"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Café Java Hut</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <img
+            class="nav-java"
+            src="/images/logo-java.png"
+            height="60px"
+            width="70px"
+          />
+          <a class="nav-java" href="/home">Café Java Hut</a>
+        </div>
+        <div class="navbar">
+          <a class="nav-home" href="/menu">Menu</a>
+          <a class="nav-home" href="/cart">Cart</a>
+          <a class="nav-home" href="/user">Sign in</a>
+        </div>
+      </nav>
+    </header>
+    <div class="products">
+      <div class="product-header">
+        <h2 id="drinks-header">Drinks</h2>
+      </div>
+
+      <div class="wrapper">
+        <% drinks.forEach(function(drink){%>
+        <div class="drink-images-wrapper">
+          <div class="product-images">
+            <a href="/drink_products/<%= drink.id %>">
+              <%= drink.name %>
+            </a>
+          </div>
+        </div>
+        <%})%>
+      </div>
+      </div>
+
+      <div class="product-header">
+        <h2 id="food-header">Food</h2>
+      </div>
+
+      <div class="food-wrapper">
+        <% food.forEach(function(food){%>
+        <div class="food-images-wrapper">
+          <div class="product-images">
+            <a href="/food_products/<%= food.id %>">
+              <%=food.name%>
+            </a>
+          </div>
+          </div>
+          <%})%>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

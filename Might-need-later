@@ -1,0 +1,70 @@
+menu.ejs
+
+          <div class="product-images">
+            <a href="/menu">
+              <img src="/images/espresso.png" height="50px" width="50px" />
+              Espresso
+            </a>
+          </div> -->
+
+        <!-- <div class="product-images">
+            <a href="/menu">
+              <img src="/images/latte.png" height="50px" width="50px" />
+              Latte
+            </a>
+          </div>
+
+          <div class="product-images">
+            <a href="/menu">
+              <img src="/images/iced.png" height="70px" width="50px" />
+              Iced Coffee
+            </a>
+          </div>
+
+          <div class="product-images">
+            <a href="/menu">
+              <img src="/images/iced-latte.png" height="70px" width="50px" />
+              Iced Latte</a
+            >
+          </div>
+          <div class="product-images">
+            <a href="/menu">
+              <img src="/images/iced-latte.png" height="70px" width="50px" />
+              Iced Latte
+            </a>
+          </div>
+        </div>
+
+        <div class="menu-image">
+          <img src="/images/coffee-menu.jpg" />
+          height="400px" width="650px" 
+        </div>
+
+
+        From router:
+
+// // router.get("/home", (req, res) => {
+// //   res.render("landing");
+// // });
+
+// router.get("/home", javahutCtrl.home);
+
+// // router.get("/menu", (req, res) => {
+// //   res.render("javahut/menu.ejs");
+// // });
+
+// router.get("/menu", javahutCtrl.menu);
+
+// // router.get("/product", async (req, res) => {
+// //   // const test = await db.query("SELECT * FROM drinks");
+// //   // console.log(test);
+// //   res.render("javahut/product");
+// // });
+
+// router.get("/product", javahutCtrl.product);
+
+// // router.get("/cart", (req, res) => {
+// //   res.render("javahut/cart");
+// // });
+
+// router.get("/cart", javahutCtrl.cart);

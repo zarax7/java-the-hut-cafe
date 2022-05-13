@@ -1,0 +1,65 @@
+<div class="food-wrapper">
+  <div class="food-images-wrapper">
+    <div class="product-images">
+      <a href="/menu">
+        <img src="/images/cookie.png" height="55px" width="70px" />
+        Chocolate Chunk Cookie
+      </a>
+    </div>
+
+    <div class="product-images">
+      <a href="/menu">
+        <img
+          src="/images/brownie.png"
+          class="product-images-food"
+          height="50px"
+          width="60px"
+        />
+        Chocolate Brownie
+      </a>
+    </div>
+
+    <div class="product-images">
+      <a href="/menu">
+        <img src="/images/danish.png" height="60px" width="55px" />
+        Cheese Danish
+      </a>
+    </div>
+
+    <div class="product-images">
+      <a href="/menu">
+        <img src="/images/loaf.png" height="55px" width="55px" />
+        Banana Loaf
+      </a>
+    </div>
+
+    <div class="product-images">
+      <a href="/menu">
+        <img src="/images/muffin.png" height="60px" width="55px" />
+        Blueberry Muffin
+      </a>
+    </div>
+
+    <div class="product-images">
+      <a href="/menu">
+        <img
+          src="/images/croissant.png"
+          class="product-images-food"
+          height="50px"
+          width="55px"
+        />
+        Butter Croissant
+      </a>
+    </div>
+  </div>
+  <div class="menu-image">
+    <img src="/images/food-menu.jpg" />
+    <!-- height="400px" width="650px" -->
+  </div>
+</div>
+
+async function showProduct(req, res, next) { try { const { name } = req.params;
+const drinks = await db.query("SELECT * FROM drinks WHERE name = $1", [ name,
+]); const food = await db.query("SELECT * FROM food WHERE name = $1", [name]);
+res.render("javahut/product", { name: drinks[0], name: food[0] }); } catch (err)
+{ console.log(err); next(err); } }

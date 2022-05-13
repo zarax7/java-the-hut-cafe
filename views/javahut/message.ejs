@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/message.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500&family=Poppins:wght@400;700"
+      rel="stylesheet"
+    />
+    <title>Java the Hut - Thank you!</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <img
+          class="nav-java"
+          src="/images/logo-java.png"
+          height="60px"
+          width="70px"
+        />
+        <a class="nav-java" href="/home">Java the Hut</a>
+      </div>
+      <div class="navbar">
+        <a class="nav-home" href="/menu">Menu</a>
+        <a class="nav-home" href="/cart">Cart</a>
+        <a class="nav-home" href="/user">Sign in</a>
+      </div>
+    </nav>
+  </header>
+  </head>
+  <body>
+      <div class="wrapper">
+          <div class="thanks-message">
+            <h1>Thank you!</h1>
+            <p id ="order-placed">Your order has been placed: </p>
+            <% order.forEach(function(product){%>
+                <p class="product-name"><%=product.name%></p> 
+                <% if (product.drink_id && product.customization_cream === 0 && product.customization_milk === 0 && product.customization_sugar === 0) {%>
+                  No Cream | No Milk | No Sugar  <%}%>   
+                <% if (product.drink_id && product.customization_cream !== 0 && product.customization_milk !== 0 && product.customization_sugar !== 0) {%> 
+                  Cream: <%= product.customization_cream%> 
+                  | Milk: <%= product.customization_milk %> 
+                  | Sugar: <%= product.customization_sugar %> 
+                <% } if (product.drink_id && product.customization_milk === 0 && product.customization_sugar !== 0 && product.customization_cream !== 0 ){%>
+                  Cream: <%= product.customization_cream %>
+                  | No Milk
+                  | Sugar: <%= product.customization_sugar %> 
+                  <% } %>  
+                  <% if(product.drink_id && product.customization_cream === 0 && product.customization_milk !== 0 && product.customization_sugar !== 0){%>
+                    No Cream 
+                    | Milk: <%= product.customization_milk %>
+                    | Sugar: <%= product.customization_sugar %> 
+                  <% } %> 
+                  <% if(product.drink_id && product.customization_cream !== 0 && product.customization_milk !== 0 && product.customization_sugar === 0){%>
+                    Cream: <%=product.customization_cream %> 
+                    | Milk: <%=product.customization_milk%>
+                    | No Sugar
+                  <%} %>
+                  <% if(product.drink_id && product.customization_cream !== 0 && product.customization_milk === 0 && product.customization_sugar === 0){%>
+                    Cream: <%=product.customization_cream %> 
+                    | No Milk
+                    | No Sugar
+                  <%}%>
+                  <% if(product.drink_id && product.customization_cream === 0 && product.customization_milk !== 0 && product.customization_sugar === 0){%>
+                    No Cream
+                    | Milk: <%=product.customization_milk %>
+                    | No Sugar
+                  <%}%>
+                  <% if(product.drink_id && product.customization_cream === 0 && product.customization_milk === 0 && product.customization_sugar !== 0){%>
+                    No Cream
+                    | No Milk
+                    | Sugar: <%=product.customization_sugar %>
+                  <%}%>
+                  <br>
+                  price: $<%=product.price%>  
+                
+                  <%})%>
+          </div>
+      </div>
+      <div id="hut-logo">
+        <a href="/home"><img src="/images/hut.png" id="hut" /></a>
+      </div>
+      <p>Click the Hut to go home</p>
+  </body>
+</html>

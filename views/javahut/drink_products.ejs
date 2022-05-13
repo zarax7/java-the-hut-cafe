@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500&family=Poppins:wght@400;700"
+      rel="stylesheet"
+    />
+    <script defer src="/javascripts/customization-button.js"></script>
+    <script defer src="/javascripts/size-buttons.js"></script>
+    <script defer src="/javascripts/customization-quantity.js"></script>
+    <title>Café Java Hut - Drinks</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <img
+            class="nav-java"
+            src="/images/logo-java.png"
+            height="60px"
+            width="70px"
+          />
+          <a class="nav-java" href="/home">Café Java Hut</a>
+        </div>
+        <div class="navbar">
+          <a class="nav-home" href="/menu">Menu</a>
+          <a class="nav-home" href="/cart">Cart</a>
+          <a class="nav-home" href="/user">Sign in</a>
+        </div>
+      </nav>
+    </header>
+    <form action="/cart" method="POST" autocomplete="off">
+      <div class="product">
+        <div class="product-wrapper">
+          <div class="product-img">
+            <img src="<%= drinks.product_image%>" />
+          </div>
+          <div class="product-description">
+            <input type="text" name="name" value="<%= drinks.name %>" />
+            <input type="text" name="id" value="<%= drinks.id %>" hidden />
+          </div>
+          <div class="product-description-drinkprice">
+            <p>Small: $<%= drinks.price_small %></p>
+            <p>Medium: $<%= drinks.price_medium %></p>
+            <p>Large: $<%= drinks.price_large %></p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sizes">
+          <div class="size-options">Size?</div>
+          <div class="cup-sizes">
+            <div class="cup-buttons">
+              <img
+                src="/images/small.png"
+                onclick="smallClickHandler()"
+                height="70px"
+                width="70"
+                id="small-size"
+              /><br />
+              <p id="cup-text-small">Small</p>
+              <input
+                type="text"
+                name="price"
+                id="price"
+                value="<%=drinks.price_small%>"
+                hidden
+              />
+            </div>
+            <div class="cup-buttons">
+              <img
+                src="/images/medium.png"
+                onclick="mediumClickHandler()"
+                height="80px"
+                width="80"
+                id="medium-size"
+              /><br />
+              <p id="cup-text-medium">Medium</p>
+              <input
+                type="text"
+                name="price"
+                id="price-medium"
+                value="<%=drinks.price_medium%>"
+                hidden
+              />
+            </div>
+            <div class="cup-buttons">
+              <img
+                src="/images/large.png"
+                onclick="largeClickHandler()"
+                height="85px"
+                width="85"
+                id="large-size"
+              /><br />
+              <p id="cup-text-large">Large</p>
+              <input
+                type="text"
+                name="price"
+                id="price-large"
+                value="<%=drinks.price_large%>"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+        <div class="customizations">
+          <h2>How would you like it?</h2>
+          <div class="labels">
+            <div class="customization-header">
+              <h3>Cream</h3>
+            </div>
+            <div class="customization-button">
+              <input
+                type="button"
+                onclick="subCreamTotal(); getCreamTotal()"
+                id="sub-cream"
+                value="-"
+              />
+              <input class="input" id="input-cream" value="0" name="cream" />
+              <input
+                type="button"
+                onclick="addCreamTotal(); getCreamTotal()"
+                id="add-cream"
+                value="+"
+              />
+            </div>
+          </div>
+          <div class="labels">
+            <div class="customization-header">
+              <h3>Milk</h3>
+            </div>
+            <div class="customization-button">
+              <input
+                type="button"
+                onclick="subMilkTotal(); getMilkTotal()"
+                id="sub-milk"
+                value="-"
+              />
+              <input class="input" id="input-milk" value="0" name="milk" />
+              <input
+                type="button"
+                onclick="addMilkTotal();  getMilkTotal()"
+                id="add-milk"
+                value="+"
+              />
+            </div>
+          </div>
+          <div class="labels">
+            <div class="customization-header">
+              <h3>Sugar</h3>
+            </div>
+            <div class="customization-button">
+              <input
+                type="button"
+                onclick="subSugarTotal(); getSugarTotal()"
+                id="sub-sugar"
+                value="-"
+              />
+              <input class="input" id="input-sugar" value="0" name="sugar" />
+              <input
+                type="button"
+                onclick="addSugarTotal(); getSugarTotal()"
+                id="add-sugar"
+                value="+"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-button">
+        <button>Add to Cart</button>
+        <a class="go-to-cart-button" href="/cart">Go To Cart</a>
+      </div>
+    </form>
+    <div class="back-link">
+      <a href="/menu">Back</a>
+    </div>
+  </body>
+</html>
